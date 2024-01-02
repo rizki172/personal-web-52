@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="../assets/css/contact .css">
+</head>
+
+<body style="background-color:#e3e7eb;">
+    <nav>
+        <nav  class="nav">
+            <div style="display: flex; align-items: center; height: 100%; margin-left: 30px; margin-right: 30px;">
+                <ul style="display: flex; list-style-type: none; gap: 50px; align-items: center;">
+                    <li>
+                        <img src="../assets/image/dumbways logo.jpg" style="height: 35px;" />
+                    </li>
+                    <li class="nav-link nav-collapse">
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-link nav-collapse">
+                        <a href="projectblog.html">
+                            Myproject
+                        </a>
+                    </li>
+                </ul>
+                <div style="display: flex; width: 100%; justify-content: end;">
+                    <a href="contact.html" class="btn-contact nav-collapse">Contact me</a>
+                </div>
+          
+    </nav>
+    <form>
+    <div class="navigator">
+        <div class="container">
+            <h1 class="h1">GET IN TOUCH</h1>
+        <label class="label-input">Nama</label>
+        <input class="input" type="name" id="name">
+        <label class="label-input">Email</label>
+        <input  class="input" type="email" id="email">
+        <label class="label-input">Phone Number</label>
+        <input class="input" type="phoneNumber" id="phoneNumber">
+       
+        <label class="label-input">Subject</label>
+        <select class="Subject" id="inputSubject" style="width: auto; height: 50px; border-radius: 10px;">
+        <option></option>
+        <option>Fullstack Developer </option>
+        <option>Frontend Developer</option>
+        <option>Beckend Developer</option>
+    </select>   
+    <label class="label-input">Your Message</label>
+        <textarea class="textarea" id="Message"></textarea>
+    <div class="button">
+        <input class="button-1" type ="button" value="submit" class ="submit" onclick="submitData()"/>
+    </div>
+    </div>    
+</div>
+</form>
+<script src="../assets/js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../day4/assets/css/addproject.css">
+</head>
+
+<body style="background-color:#e3e7eb;">
+    <nav  class="nav">
+        <div style="display: flex; align-items: center; height: 100%; margin-left: 30px; margin-right: 30px;">
+            <ul style="display: flex; list-style-type: none; gap: 50px; align-items: center;">
+                <li>
+                    <img src="./assets/image/dumbways logo.jpg" style="height: 35px;" />
+                </li>
+                <li class="nav-link nav-collapse">
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-link nav-collapse">
+                    <a href="projectblog.html">
+                        Myproject
+                    </a>
+                </li>
+            </ul>
+            <div style="display: flex; width: 100%; justify-content: end;">
+                <a href="contact.html" class="btn-contact nav-collapse">Contact me</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-contact">
+        <div class="navigator">
+            <form style="flex-direction: column; " onsubmit="submitData(event)">
+                <div class="container">
+                    <h1 class="h1">ADD MY PROJECT</h1>
+                    <label class="text-label">Project name</label>
+                    <input type="text" id="pName" class="input" />
+                    <div class="container_date">
+                        <section>
+                            <label class="text-label">Start Date</label>
+                            <input type="date" id="s-date" class="input-start" />
+                        </section>
+                        <section>
+                            <label class="text-label">End Date</label>
+                            <input type="date" id="e-date" class="input-end" />
+                        </section>
+                    </div>
+                    <div>
+                        <label style="font-weight: bold;">Description</label>
+                        <textarea id="description" class="text-area"></textarea>
+                    </div>
+                    <div>
+                        <div class="container-checkbox">
+                            <label class="text-label">Technologies</label>
+                            <div class="checkbox">
+                                <input type="checkbox" id="tech1" style="margin-top: 15px; border-radius: 15px;">
+                                <label class="text-checkbox">Node Js</label>
+                                <input type="checkbox" id="tech3" style="margin-left: 40px;">
+                                <label class="text-checkbox">Next Js</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="tech2" style="margin-bottom: 20px;">
+                                <label class="text-checkbox">React Js</label>
+                                <input type="checkbox" id="tech4" style="margin-left: 38px;">
+                                <label class="text-checkbox">TypeScript</label>
+                            </div>
+                            <p>Upload Image</p>
+                            <div class="boxx">
+                                <label for="attachFile">
+                                    <img src="./assets/image/file (1).png" alt="file" />
+                                </label>
+                                <input type="file" id="attachFile" hidden />
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <input type="submit" value="Submit" class="submit" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="header-text">
+            <h1>MY PROJECT</h1>
+        </div>
+        <div class="container-blog" id="project-list">
+            <div id="project-li" class="card-container">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./assets/image/logo1.jpg" alt="log1">
+                    </div>
+                    <div class="card-body">
+                        <h2>Dumbways Mobile april 2021</h2>
+                        <h3>durasi 3 bulan</h3>
+                        <p>App that used for  student, it was deployed and can be downloaded on 
+                        playstore. Happy download</p>
+                    </div>
+                    <div class="card-icons">
+                        <i class="fa-brands fa-google-play fa-xl"></i>
+                        <i class="fa-brands fa-android fa-xl"></i>
+                        <i class="fa-brands fa-java fa-lg"></i>
+                    </div>
+                    <div class="card-footer">
+                        <button>Exit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./assets/image/logo2.jpg" alt="logo2">
+                    </div>
+                    <div class="card-body">
+                        <h2>Dumbways Mobile april 2021</h2>
+                        <h3>durasi 3 bulan</h3>
+                        <p>App that used for  student, it was deployed and can be downloaded on 
+                        playstore. Happy download</p>
+                    </div>
+                    <div class="card-icons">
+                            <i class="fa-brands fa-google-play fa-xl"></i>
+                            <i class="fa-brands fa-android fa-xl"></i>
+                            <i class="fa-brands fa-java fa-lg"></i>
+                    </div>
+                    <div class="card-footer">
+                        <button>Exit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./assets/image/logo3.jpg" alt="logo3">
+                    </div>
+                    <div class="card-body">
+                        <h2>Dumbways Mobile april 2021</h2>
+                        <h3>durasi 3 bulan</h3>
+                        <p>App that used for  student, it was deployed and can be downloaded on 
+                        playstore. Happy download</p>
+                    
+                    </div>
+                    <div class="card-icons">
+                        <i class="fa-brands fa-google-play fa-xl"></i>
+                        <i class="fa-brands fa-android fa-xl"></i>
+                        <i class="fa-brands fa-java fa-lg"></i>
+                    </div>
+                    <div class="card-footer">
+                        <button>Exit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./assets/image/logo4.jpg">
+                    </div>
+                    <div class="card-body">
+                        <h2>Dumbways Mobile april 2021</h2>
+                        <h3>durasi 3 bulan</h3>
+                        <p>App that used for  student, it was deployed and can be downloaded on 
+                        playstore. Happy download</p>
+                    </div>
+                    <div class="card-icons">
+                           <i class="fa-brands fa-google-play fa-xl"></i>
+                             <i class="fa-brands fa-android fa-xl"></i>
+                            <i class="fa-brands fa-java fa-lg"></i>
+                    </div>
+                    <div class="card-footer">
+                        <button>Exit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="card">
+                 <div class="card-img">
+            <img src="./assets/image/logo5.jpg">
+            </div>
+            <div class="card-body">
+            <h2>Dumbways Mobile april 2021</h2>
+            <h3>durasi 3 bulan</h3>
+            <p>App that used for  student, it was deployed and can be downloaded on 
+            playstore. Happy download</p>
+            </div>
+            <div class="card-icons">
+            <i class="fa-brands fa-google-play fa-xl"></i>
+            <i class="fa-brands fa-android fa-xl"></i>
+            <i class="fa-brands fa-java fa-lg"></i>
+            </div>
+            <div class="card-footer">
+            <button>Exit</button>
+            <button>Delete</button>
+            </div>
+                </div>
+            </div>
+            <div id="newProjectCard">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/addproject.js"></script>
+</body>
+
+</html>
