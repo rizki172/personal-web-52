@@ -44,7 +44,7 @@ function renderProject() {
         projectCard.classList.add("card");
 
         projectCard.innerHTML = `
-        <a href="blogproject.html" class="project-link">
+        <a href="detailproject.html" class="project-link">
             <div class="card-img">
                 <img src="${project.image}" alt="${project.title}">
             </div>
