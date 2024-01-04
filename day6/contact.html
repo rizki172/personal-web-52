@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact</title>
     <link rel="stylesheet" href="./assets/css/contact .css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body style="background-color:#e3e7eb;">
@@ -13,14 +14,14 @@
             <div style="display: flex; align-items: center; height: 100%; margin-left: 30px; margin-right: 30px;">
                 <ul style="display: flex; list-style-type: none; gap: 50px; align-items: center;">
                     <li>
-                        <img src="./assets/image/dumbways logo.jpg" style="height: 35px;" />
+                        <img src="./assets/image/dumbways logo.jpg" style="height: 35px;" class="img-nav" />
                     </li>
-                    <li class="nav-link nav-collapse">
+                    <li class="nav-collapse">
                         <a href="index.html">
                             Home
                         </a>
                     </li>
-                    <li class="nav-link nav-collapse">
+                    <li class=" nav-collapse">
                         <a href="addproject.html">
                             Myproject
                         </a>
@@ -28,9 +29,16 @@
                 </ul>
                 <div style="display: flex; width: 100%; justify-content: end;">
                     <a href="contact.html" class="btn-contact nav-collapse">Contact me</a>
+                    <i class="fa-solid fa-bars fa-2x" style="cursor: pointer;" id="hamburger-button" onclick="openHamburger()"></i>
                 </div>
-          
+                
     </nav>
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+        <a style="text-decoration: none;" href="index.html" class="active"><i class="fa fa-home" aria-hidden="true" style="margin: 5px;"></i>Home</a>
+        <a style="text-decoration: none;" href="addproject.html"><i class="fa-brands fa-blogger-b"style="margin:5px"></i>Myproject</a>
+        <a style="text-decoration: none;" href="contact.html"><i class="fa fa-address-book" aria-hidden="true" style="margin: 5px;"></i>Contact Me</a>
+    </div>
+
     <form>
     <div class="navigator">
         <div class="container">
@@ -58,5 +66,6 @@
 </div>
 </form>
 <script src="./assets/js/contact.js"></script>
+<script src="./assets/js/navbar.js"></script>
 </body>
 </html>

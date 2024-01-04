@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+
+.btn-contact {
+    background-color: #111727;
+    color: white;
+    padding: 10px;
+    width: 80px;
+    height: 15px;
+    font-size: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+.nav {
+    background-color: white; 
+    width: 100%;
+    height: 60px;
+}
+.nav-link {
+    font-size: 18px;
+}
+
+.nav-link a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-link a:hover {
+    color: orangered;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    width: 60%;
+    margin: 90px auto;
+    padding: 20px;
+    background-color: white;
+}
+.container1 {
+   flex: 2;
+    margin-left: 15px;
+    gap: 4px;
+}
+.button-container{
+            display: flex;
+            justify-content: flex;
+            margin: 20px;
+            margin-left: -10px;
+            margin-top: 30px;
+            gap:10px;
+
+        }
+        .button {
+            text-align: center;
+            margin-top: -7px;
+            padding: 5px 15px;
+            font-size: 15px;
+            background-color:#111727;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+            
+        .button-2 {
+             display: flex;
+            justify-content: flex;
+            border-radius: 8px;
+            background-color: white;
+            color: black;
+            border: none;
+            margin: -1px;
+            margin-left: 8px;
+            padding: 20px 20px black;
+            
+        }
+        .social-icons {
+            display: flex;
+            justify-content: flex-start;
+    margin-top: 100%;
+    gap: 5px;
+}
+
+
+.social-icons i {
+    margin: 5px;
+}
+.social {
+    margin: 5px; 
+    color: black;
+}
+.container2 {
+    width: 350px;
+    border-radius: 15px;
+    flex: 1;
+    padding: 20px;
+}
+.container2 h1{
+    display: flex;
+    justify-content: center;
+    
+}
+.container2 table {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.img {
+    width: 100%;
+}
+
+

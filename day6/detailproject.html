@@ -111,22 +111,29 @@
                 <li>
                     <img src="./assets/image/dumbways logo.jpg" style="height: 35px;" />
                 </li>
-                <li class="nav-link nav-collapse">
+                <li class=" nav-collapse">
                     <a href="index.html">
                         Home
                     </a>
                 </li>
-                <li class="nav-link nav-collapse">
-                    <a href="addproject.html">
+                <li class="nav-collapse">
+                    <a href="projectblog.html">
                         Myproject
                     </a>
                 </li>
             </ul>
             <div style="display: flex; width: 100%; justify-content: end;">
                 <a href="contact.html" class="btn-contact nav-collapse">Contact me</a>
+                <i class="fa-solid fa-bars fa-2x" style="cursor: pointer;" id="hamburger-button" onclick="openHamburger()"></i>
             </div>
         </div>
     </nav>
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+        <a href="index.html" class="active"><i class="fa fa-home" aria-hidden="true" style="margin: 5px;"></i>Home</a>
+        <a href="addproject.html"><i class="fa-brands fa-blogger-b"style="margin:5px"></i>Myproject</a>
+        <a href="contact.html"><i class="fa fa-address-book" aria-hidden="true" style="margin: 5px;"></i>Contact Me</a>
+    </div>
+
 <h1 style="display: flex; justify-content: center;margin-top: 30px;">Dumbways Web App</h1>
   <section class="profile-container">
    <div class="container1">
@@ -186,6 +193,6 @@
    </p>
 
 </div>
-       <script src="JS/navbar.js"></script>
+       <script src="./assets/js/navbar.js"></script>
 </body>
 </html>

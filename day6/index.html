@@ -18,12 +18,12 @@
                 <li>
                     <img src="./assets/image/dumbways logo.jpg" style="height: 35px;" />
                 </li>
-                <li class="nav-link nav-collapse">
+                <li class="nav-collapse">
                     <a href="index.html">
                         Home
                     </a>
                 </li>
-                <li class="nav-link nav-collapse">
+                <li class=" nav-collapse">
                     <a href="addproject.html">
                         Myproject
                     </a>
@@ -31,9 +31,16 @@
             </ul>
             <div style="display: flex; width: 100%; justify-content: end;">
                 <a href="contact.html" class="btn-contact nav-collapse">Contact me</a>
+                <i class="fa-solid fa-bars fa-2x" style="cursor: pointer;" id="hamburger-button" onclick="openHamburger()"></i>
             </div>
         </div>
     </nav>
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+        <a style="text-decoration: none;" href="index.html" class="active"><i class="fa fa-home" aria-hidden="true" style="margin: 5px;"></i>Home</a>
+        <a style="text-decoration: none;" href="addproject.html"><i class="fa-brands fa-blogger-b"style="margin:5px"></i>Myproject</a>
+        <a style="text-decoration: none;" href="contact.html"><i class="fa fa-address-book" aria-hidden="true" style="margin: 5px;"></i>Contact Me</a>
+    </div>
+
 
     <section class="profile-container" style="background-color: white;">
         <div class="container1">
@@ -61,10 +68,10 @@
         </div>
             <div class="container2">
                 <img  class="img" src="./assets/image/foto.jpg" alt="fotoprofile">
-                <h1>Rizki</h1>
+                <h1 class="h1">Rizki</h1>
                <table>
-                <tr>
-                    <td>Fullstuck Developer</td>
+                <tr class="tr">
+                    <td class="td">Fullstuck Developer</td>
                 </tr>
                </table>
 
@@ -73,7 +80,7 @@
         </div>
     </section>
 
-    <script src="JS/navbar.js"></script>
+    <script src="./assets/js/navbar.js"></script>
 </body>
 
 </html>
