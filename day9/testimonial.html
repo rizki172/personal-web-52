@@ -10,8 +10,8 @@
     <style>
 body {
     margin: 0;
-    background-color:#e3e7eb;
     font-family: 'Arial', sans-serif;
+    background-color:#e3e7eb
   }
 
 .btn-contact {
@@ -42,7 +42,6 @@ body {
 .nav-collapse a:hover {
     color: orangered;
 }
-
 #hamburger-button {
     display: none;
 }
@@ -60,15 +59,32 @@ body {
 
 .hamburger-nav-container .active {
     background-color:#e2e6ea;
+
+}
+.container-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.rating-btn {
+    margin: 20px;
+    padding: 0px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;
 }
-
+.container-button h1{
+    text-align: center;
+}
 
 .testimonials {
     display: flex;
@@ -85,7 +101,6 @@ body {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
 .testimonial img {
     height: 200px;
     object-fit: cover;
@@ -157,6 +172,7 @@ body {
         flex-direction: column;
     }
 }
+
     </style>
 </head>
 <body >
@@ -192,9 +208,32 @@ body {
         <a style="text-decoration: none;" href="contact.html"><i class="fa fa-address-book" aria-hidden="true" style="margin: 5px;"></i>Contact Me</a>
     </div>
 
-
-    <div class="container">
+    <div class="container-button">
         <h1>My Testimonials</h1>
+        <div class="container-rating">
+            <h2> Rating By Star</h2>
+            <div class="rating">
+                <button class="rating-btn" onclick="allTestimonials()">
+                    All
+                </button>
+                <button class="rating-btn" onclick="filterTestimonials(1);">
+                    1 <i class="fa-solid fa-star"></i>
+                </button>
+                <button class="rating-btn" onclick="filterTestimonials(2);">
+                    2 <i class="fa-solid fa-star"></i>
+                </button>
+                <button class="rating-btn" onclick="filterTestimonials(3);">
+                    3 <i class="fa-solid fa-star"></i>
+                </button>
+                <button class="rating-btn" onclick="filterTestimonials(4);">
+                    4 <i class="fa-solid fa-star"></i>
+                </button>
+                <button class="rating-btn" onclick="filterTestimonials(5);">
+                    5 <i class="fa-solid fa-star"></i>
+                </button>
+            </div>
+        </div>
+    <div class="container">
         <section class="testimonials" id="testimonials">
             <!-- <div class="testimonial">
                 <img src="assets/profile/profile.png" class="profile-testimonial" />
