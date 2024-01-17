@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/assets/image/dumbways logo.jpg" style="height: 50px; width: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/addproject">My Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/testimonial">Testimonial</a>
+                    </li>
+                </ul>
+                <div style="display: flex; justify-content: start; margin: 10px; gap:20px;">
+                    <li class="nav-item" style="display: flex; justify-content: center;"><a aria-current="page"
+                            style="text-decoration: none; color: black  ; " href="/login">Login</a></li>
+                    <li class="nav-item" style="display: flex; justify-content: center;"><a aria-current="page"
+                            href="/register" style="text-decoration: none; color: black;">Register</a></li>
+                </div>
+
+                <form class="d-flex">
+                    <button class="btn btn-secondary rounded-pill " type="submit"><a href="/contact"
+                            style="color: white; text-decoration: none;">Contact Me</a></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="card mb-3 gap-5" style="background-color: #e3e7eb;">
+        <h1 style="display: flex; justify-content: center; margin: 10px;">{{data.id}} {{data.name}}</h1>
+        <div class="row g-0">
+            <div class="col-md-7">
+                <img src="../assets/image/logo1.jpg" class="img-fluid rounded-start" alt="logo"
+                    style="width: 90%; height: auto;">
+            </div>
+            <div class="col-md-4">
+                <div class="ml-1 mt-4  gap-2">
+                    <h5 class="card-title">Durasi</h5>
+                    <div class="d-flex flex-column align-items-start gap-2">
+                        <a><i class="fa-solid fa-calendar-days fa-xl"></i>{{data.startDate}} - {{data.endDate}}</a>
+                        <a><i class="fa-solid fa-clock fa-xl"></i>{{data.duration}}</a>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <h5>Teknologi</h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="d-flex flex-column align-items-start gap-2">
+                                {{#each data.technologies}}
+                                <a><i class="fa-brands fa-react fa-xl"></i>{{this}}</a>
+                                {{/each}}
+                            </div>
+                        </div>
+                        <!-- Tambahkan bagian ini untuk teknologi tambahan jika perlu -->
+                        <!-- <div class="col-md-4">
+                            <div class="d-flex flex-column align-items-start gap-2">
+                                <a><i class="fa-brands fa-node-js fa-xl"></i>Node js</a>
+                                <a><i class="fa-brands fa-vuejs fa-xl"></i>Vue js</a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5">
+                <p>
+                    {{data.description}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
