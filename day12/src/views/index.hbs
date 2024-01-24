@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
+
 </head>
 
 <body style="background-color: #e3e7eb;">
@@ -90,6 +90,7 @@
         </div>
     </section>
     <div class="container mt-4">
+       <h1 style="display: flex; justify-content:center; margin:1em">MY PROJECT</h1>
         <div class="row justify-content-center">
             {{#each projects}}
             <div class="col-md-4 mb-4">
@@ -97,28 +98,28 @@
                     <div class="card-body">
                         <img src="/assets/image/logo1.jpg" class="card-img-top" alt="logo">
                         <h2 style="font-size: 20px;">
-                            <a href="/detailproject/{{this.id}}">{{this.name}}</a>
+                            <a style="text-decoration: none; color:black" href="/detailproject/{{this.id}}">{{this.name}}</a>
                         </h2>
                         <h4 style="font-size: 10px;">Duration: {{this.duration}}</h4>
                         <p>{{this.description}}</p>
-<div class="card-icons">
-    {{#each this.technologies}}
-        {{#if (isNodeJs this)}}
-            <i class="fab fa-node-js"></i>
-        {{else if (isNextJs this)}}
-            <i class="fab fa-js"></i>
-        {{else if (isReactJs this)}}
-            <i class="fab fa-react"></i>
-        {{else if (isTypeScript this)}}
-            <i class="fab fa-js"></i>
-        {{/if}}
-    {{/each}}
-</div>
+                        <div class="card-icons">
+                            {{#each this.technologies}}
+                            {{#if (isNodeJs this)}}
+                            <i class="fab fa-node-js"></i>
+                            {{else if (isNextJs this)}}
+                            <i class="fab fa-js"></i>
+                            {{else if (isReactJs this)}}
+                            <i class="fab fa-react"></i>
+                            {{else if (isTypeScript this)}}
+                            <i class="fab fa-js"></i>
+                            {{/if}}
+                            {{/each}}
+                        </div>
 
 
                         <div class="d-flex justify-content-center mt-3">
-                            <a href="/editProject/{{this.id}}" class="btn btn-primary me-2">Edit</a>
-                            <a href="/delete/{{this.id}}" class="btn btn-danger">Delete</a>
+                            <a style="width: 33%; border-radius: 20px; background-color: #111727; color: #e3e7eb;" href="/editProject/{{this.id}}" class="btn btn-primary me-2">Edit</a>
+                            <a style="width: 33%; border-radius: 20px; background-color: #111727; color: #e3e7eb;" href="/delete/{{this.id}}" class="btn btn-danger">Delete</a>
                         </div>
                     </div>
                 </div>

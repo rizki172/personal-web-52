@@ -20,6 +20,7 @@ function calculateDuration(startDate, endDate) {
     return `${diffDays} hari`;
 }
 const hbs = require('hbs');
+const { register } = require('module');
 
 hbs.registerHelper('isNodeJs', function (tech) {
     return tech === 'NodeJs';
@@ -47,6 +48,10 @@ app.get('/delete/:id', deleteProject);
 app.get('/editProject/:id', editProjectForm);
 app.post('/editProject/:id', editProject);
 app.get('/blogproject/:id', detailproject);
+app.get('/login', login)
+app.get('/register', register)
+
+
 
 function home(req, res) {
     const dataWithIcons = dataDummy.map(blog => {
@@ -154,6 +159,10 @@ function editProject(req, res) {
 
 function getAvailableTechnologies() {
     return ["NodeJs", "ReactJs", "NextJs", "TypeScript"];
+}
+
+function login(req, res) {
+    res.render('login');
 }
 
 app.listen(port, () => {

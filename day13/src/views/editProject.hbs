@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body style="background-color: #e3e7eb;">
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/assets/image/dumbways logo.jpg" style="height: 50px; width: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/addproject">My Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/testimonial">Testimonial</a>
+                    </li>
+                </ul>
+                <div style="display: flex; justify-content: start; margin: 10px; gap:20px;">
+                    <li class="nav-item" style="display: flex; justify-content: center;"><a aria-current="page"
+                            style="text-decoration: none; color: black  ; " href="/login">Login</a></li>
+                    <li class="nav-item" style="display: flex; justify-content: center;"><a aria-current="page"
+                            href="/register" style="text-decoration: none; color: black;">Register</a></li>
+                </div>
+
+                <form class="d-flex">
+                    <button class="btn btn-secondary rounded-pill " type="submit"><a href="/contact"
+                            style="color: white; text-decoration: none;">Contact Me</a></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form method="post" action="/editProject/{{id}}">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <h1 class="h1" style="display: flex;justify-content: center; margin-top: 10%;">UPDATE MY PROJECT
+                    </h1>
+                    <div class="form-group">
+                        <label for="pName" class="text-label">Project name</label>
+                        <input type="text" id="pName" name="title" value="{{data.name}}" class="form-control" />
+                    </div>
+                    <div class="container-date">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="startDate" class="text-label">Start Date</label>
+                                <input type="date" id="startDate" name="start_date" value="{{data.start_date}}"
+                                    class="form-control" />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="endDate" class="text-label">End Date</label>
+                                <input type="date" id="endDate" name="end_date" value="{{data.end_date}}"
+                                    class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description"
+                            class="form-control">{{data.description}}</textarea>
+                    </div>
+                    <label class="text-label mr-3">Technologies</label>
+                    <div class="form-group d-flex" style="gap: 5px;">
+                        <div class="d-flex flex-column">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="NodeJs" id="tech1"
+                                    name="technologies">
+                                <label class="form-check-label" for="tech1">Node Js</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="ReactJs" id="tech2"
+                                    name="technologies">
+                                <label class="form-check-label" for="tech2">React Js</label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="NextJs" id="tech3"
+                                    name="technologies">
+                                <label class="form-check-label" for="tech3">Next Js</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="TypeScript" id="tech4"
+                                    name="technologies">
+                                <label class="form-check-label" for="tech4">TypeScript</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputImage" class="form-label">Upload image</label>
+                        <div class="input-group">
+                            <input type="file" class="form-control" id="attachFile" name="icon">
+                            <label for="attachFile" class="input-group-text">
+                                <img src="../assets/image/file (1).png" alt="file" style="width: 20px; height: 20px;">
+                            </label>
+                        </div>
+                        <img id="previewImage" src="#" alt="Preview" style="max-width: 100%; display: none;">
+                    </div>
+
+                    <div class="col-12 text-end mt-4">
+                        <button class="btn btn-secondary rounded-pill " type="submit"
+                            style="width: 20%; background-color: #111727;">Submit </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+ <script>
+    const selectedTechs = "{{data.technologies}}";
+    const nodeJsBox = document.getElementById("tech1");
+    const reactJsBox = document.getElementById("tech2");
+    const nextJsBox = document.getElementById("tech3");
+    const typeScriptBox = document.getElementById("tech4");
+
+    nodeJsBox.checked = selectedTechs.includes("NodeJs");
+    reactJsBox.checked = selectedTechs.includes("ReactJs");
+    nextJsBox.checked = selectedTechs.includes("NextJs");
+    typeScriptBox.checked = selectedTechs.includes("TypeScript");
+</script>
+
+</body>
+
+</html>

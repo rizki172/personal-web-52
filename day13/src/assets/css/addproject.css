@@ -1,0 +1,19 @@
+@media only screen and (max-width: 480px) {
+    .navigator {
+      display: flex;
+      justify-content: center;
+    }
+    .container-blog {
+      display: flex;
+      justify-content: center;
+    }
+    .card-container {
+      display: flex;
+      justify-content: center;
+    }
+    .nav-img {
+        display: flex;
+        margin-left: -30px;
+    }
+  }
+  
